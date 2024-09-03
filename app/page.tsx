@@ -9,6 +9,7 @@ import { MdInbox } from "react-icons/md";
 import { PiDotsThreeCircle, PiDotsThreeCircleFill } from "react-icons/pi";
 import { RiNotification4Fill } from "react-icons/ri";
 import { Inter } from "next/font/google";
+import FeedCard from "@/components/FeedCard/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -64,6 +65,7 @@ export default function Home() {
   return (
     <div className={inter.className}>
       <div className="grid grid-cols-12 h-screen w-screen px-32">
+        {/* sidebar  */}
         <div className="col-span-3 pt-1 px-4">
           <div className="text-2xl h-fit w-fit rounded-full hover:bg-gray-900 p-2 cursor-pointer transition-all">
             <FaXTwitter />
@@ -80,12 +82,21 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-            <button className="bg-[#1A8CD8] p-3 rounded-full w-full mt-3 p-4 text-lg font-semibold">
+            <button className="bg-[#1A8CD8]  rounded-full w-[85%] mt-3 p-4 pb-2.5 pt-2.5 text-lg font-semibold">
               Post
             </button>
           </div>
         </div>
-        <div className="col-span-6 border-r-[1px] border-l-[1px] border-white/35"></div>
+        <div className="col-span-6 border-r-[1px] border-l-[1px] border-[#2F3336] -ml-8 h-screen overflow-scroll scrollbar-hide ">
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+        </div>
         <div className="col-span-3"></div>
       </div>
     </div>
